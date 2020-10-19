@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Portfolio Webpage</title>
+    </head>
+
+    <body>
+
+    	<style>
+
+    		html {
+    			scroll-behavior: smooth;
+    		}
+
+    		@media only screen and (max-width: 800px) {
+    			body {
+    				background-color: red;
+				}
+			}
+
+    		body {
+    			background-color: #292929;
+                margin: 0;
+            }
+
+    		#navbar {
+    			display: flex;
+    			justify-content: flex-end;
+    			position: fixed;
+    			top: 0;
+    			left: 0;
+    			width: 100%;
+    			background: #DC143C;
+    			box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    			z-index: 10;
+    			font-family: monospace;
+    		}
+
+    		.linksPrincipales {
+    			display: block;
+    			font-size: 2.2rem;
+    			padding: 2rem;
+    		}
+
+    		#welcome-section {
+    			display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items: center;
+			    width: 100%;
+			    height: 100vh;
+			    background-color: #000;
+			    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+			}
+
+    		h1 {
+    			text-align: center;
+    			font-family: monospace;
+    			font-size: 40px;
+    			color: white;
+    		}
+
+    		h2 {
+    			text-align: center;
+    			font-family: cursive;
+    			font-size: 20px;
+    			color: #DC143C;
+    		}
+
+    		h3 {
+    			text-align: center;
+    			font-size: 30px;
+    			font-family: monospace;
+    			color: white;
+    		}
+
+    		img {
+    			width: 200px;
+    		}
+
+    	
+
+    		a {
+    			text-decoration: none;
+    			color: black;
+    		}
+
+    		#divLinkFinal {
+    			text-align: center;
+    		}
+
+    		#proyectosGrid {
+    			display: grid;
+    			grid-template-columns: repeat(3, 250px);
+    			justify-content: center;
+    			grid-gap: 1em;
+    		}
+
+    		#volverArriba {
+    			text-align: center;
+    		}
+
+    		#up {
+    			font-size: 30px;
+    			font-family: monospace;
+    			 color: #DC143C;
+    		}
+
+    		p {
+    			text-align: center;
+    			font-size: 15px;
+    			color: grey;
+    		}
+
+    		#divProyectos {
+    			background-color: #000;
+			    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+			}
+
+    		
+    	</style>
+
+    	<nav id=navbar>
+    		<a href="#projects" class="linksPrincipales">Trabajos</a>
+    		<a href="#profile-link" class="linksPrincipales">Contacto</a>
+    	</nav>
+
+    	<section id="welcome-section">
+    		<h1>Manu González</h1>
+    		<h2>web developer</h2>
+    	</section>
+
+    	
+    	<section id="projects" style="padding-top: 5rem;">
+
+    		<h3 class="project-tile">Algunos de mis proyectos</h3>
+    		
+    		<div id="proyectosGrid">
+	    		<a target="_blank" title="Bane" href="https://manuelgonzalez007.github.io/bane/"><img src="bane.jpg" alt="Foto de Bane" /></a>
+	    		
+
+	    		<a target="_blank" title="theOffice" href="https://manuelgonzalez007.github.io/theOfficeTrivia/"><img src="theOffice.jpg" alt="Cartel de The Office" /></a>
+
+	    		<a target="_blank" title="Elm Street" href="https://manuelgonzalez007.github.io/aNightmareOnElmStreet/"><img src="elmStreet.jpg" alt="Cartel de la película A nightmare on Elm Street" /></a>
+
+	    		<a target="_blank" title="Count Up" href="https://manuelgonzalez007.github.io/countUp/"><img src="countUp.jpg" alt="Imagen de un cronometro" /></a>
+
+	    		<a target="_blank" title="Comic" href="https://manuelgonzalez007.github.io/comicBookGuy/"><img src="comicBookGuy.png" alt="Imagen del sujeto de las historietas comicas" /></a>
+
+				<a target="_blank" title="Lemongrab" href="https://manuelgonzalez007.github.io/deathOfLemongrab/"><img src="lemongrab.png" alt="Imagen de Lemongrab" /></a>				
+    		</div>
+    	
+
+    		
+    	</section>
+
+    	<div id="divProyectos">
+	    	<h3 style="padding-top: 8rem";>Podés ver todos mis trabajos en</h3>
+
+	    	<div id="divLinkFinal">
+	    		<a id="profile-link"  target="_blank" title="gitHub" href="https://github.com/ManuelGonzalez007"><img src="gitHub.png" style="width: 150px"></a>
+	    	</div>
+	    	<br>
+	    	<br>
+	    	<br>
+	    	<br>
+	    	<br>
+
+	    	<div id="volverArriba">
+				<a id="up" href="#top"><img src="up.png" style="width: 25px"></a>
+			</div>
+			<p>BACK TO TOP</p>
+			<br>
+			<br>
+		</div>
+
+
+
+    	<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+
+    </body>
+</html>
