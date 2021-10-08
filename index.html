@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+ 
     <head>
         <meta charset="utf-8">
         <title>Personal Portfolio Webpage</title>
@@ -21,7 +21,7 @@
 			}
 
     		body {
-    			background-color: #292929;
+    			background-color:black;
                 margin: 0;
             }
 
@@ -52,7 +52,9 @@
 			    width: 100%;
 			    height: 100vh;
 			    background-color: #000;
-			    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+			    background-image: url("binary.jpg");
+				background-repeat: no-repeat;
+				background-position:  50% 150%
 			}
 
     		h1 {
@@ -65,7 +67,7 @@
     		h2 {
     			text-align: center;
     			font-family: cursive;
-    			font-size: 20px;
+    			font-size: 25px;
     			color: #DC143C;
     		}
 
@@ -78,6 +80,7 @@
 
     		img {
     			width: 200px;
+				border: 3px solid red;
     		}
 
     	
@@ -110,32 +113,58 @@
 
     		p {
     			text-align: center;
-    			font-size: 15px;
-    			color: grey;
+    			font-size: 30px;
+    			color: white;
     		}
 
     		#divProyectos {
     			background-color: #000;
-			    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+			    
+			}
+
+			#aboutMe {
+				display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items: center;
+			    width: 100%;
+			    height: 100vh;
+			    background-color: #000;
 			}
 
     		
     	</style>
 
     	<nav id=navbar>
-    		<a href="#projects" class="linksPrincipales">Trabajos</a>
-    		<a href="#profile-link" class="linksPrincipales">Contacto</a>
+			<a href="#aboutMe" class="linksPrincipales">About me</a>
+    		<a href="#projects" class="linksPrincipales">Projects</a>
+			<a href="#divProyectos" class="linksPrincipales">GitHub</a>
+    		<a href="#contacto" class="linksPrincipales">Contact</a>
     	</nav>
 
     	<section id="welcome-section">
     		<h1>Manu González</h1>
-    		<h2>web developer</h2>
+    		<h2>Software Developer</h2>
     	</section>
+
+		<section id="aboutMe">
+			
+			<p>
+				I'm passionate about coding and like spend hours learning different 
+				technologies.
+				<br>
+				Everyday I invest my time in enriching my knowledge.
+				<br>
+				I'm looking to become a better Full Stack Developer day after day
+			</p>
+
+
+		</section>
 
     	
     	<section id="projects" style="padding-top: 5rem;">
 
-    		<h3 class="project-tile">Algunos de mis proyectos</h3>
+    		<h3 class="project-tile">Some of my projects</h3>
     		
     		<div id="proyectosGrid">
 	    		<a target="_blank" title="Bane" href="https://manuelgonzalez007.github.io/bane/"><img src="bane.jpg" alt="Foto de Bane" /></a>	    		
@@ -152,7 +181,9 @@
 
 	    		<a target="_blank" title="Comic" href="https://manuelgonzalez007.github.io/comicBookGuy/"><img src="comicBookGuy.png" alt="Imagen del sujeto de las historietas comicas" /></a>
 
-				<a target="_blank" title="Lemongrab" href="https://manuelgonzalez007.github.io/deathOfLemongrab/"><img src="lemongrab.png" alt="Imagen de Lemongrab" /></a>				
+				<a target="_blank" title="Lemongrab" href="https://manuelgonzalez007.github.io/deathOfLemongrab/"><img src="lemongrab.png" alt="Imagen de Lemongrab" /></a>
+
+				<a target="_blank" title="starWars" href="https://manuelgonzalez007.github.io/starWarsGallery/"><img src="starWars.jpg" alt="Imagen de Darth Vader" /></a>	
     		</div>
     	
 
@@ -160,28 +191,41 @@
     	</section>
 
     	<div id="divProyectos">
-	    	<h3 style="padding-top: 8rem";>Podés ver todos mis trabajos en</h3>
+
+			<h3 style="padding-top: 8rem">Find all my work here</h3>
 
 	    	<div id="divLinkFinal">
-	    		<a id="profile-link"  target="_blank" title="gitHub" href="https://github.com/ManuelGonzalez007"><img src="gitHub.png" style="width: 150px"></a>
+	    		<a target="_blank" title="gitHub" href="https://github.com/ManuelGonzalez007"><img style="width: 100px; border: 0;" src="gitHub.png" style="width: 150px"></a>
 	    	</div>
-	    	<br>
-	    	<br>
-	    	<br>
-	    	<br>
-	    	<br>
+			<br>
+			<br>
+		
+			<h3 id="contacto">Email</h3>
 
-	    	<div id="volverArriba">
-				<a id="up" href="#top"><img src="up.png" style="width: 25px"></a>
+			<p>manuelgonzalez14812@gmail.com</p>
+			<br>
+
+			
+			<h3>Linkedin</h3>
+			
+			<div style="text-align: center">
+				<a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/manuel-gonz%C3%A1lez-ab985810b/"><img style="width: 50px; border: 0" src="linkedin.jpg"></a>
 			</div>
-			<p>BACK TO TOP</p>
+			
+
+	    	
+	    	<br>
+	    	<br>
 			<br>
 			<br>
-		</div>
-
-
-
-    	<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+						
+	    	<div id="volverArriba">
+				<a id="up" href="#top"><img style=" width: 30px; border: 0" src="up.png" style="width: 25px"></a>
+			</div>
+			<p style="color:red; font-size: 15px;">BACK TO TOP</p>
+			<br>
+			<br>
+		</div>    	
 
     </body>
 </html>
