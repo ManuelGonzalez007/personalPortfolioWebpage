@@ -1,201 +1,216 @@
 <!DOCTYPE html>
 <html>
- 
-    <head>
-        <meta charset="utf-8">
-        <title>Personal Portfolio Webpage</title>
-    </head>
 
-    <body>
+<head>
+	<meta charset="utf-8">
+	<title>Personal Portfolio Webpage</title>
+</head>
 
-    	<style>
+<body>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
 
-    		html {
-    			scroll-behavior: smooth;
-    		}
-
-    		@media only screen and (max-width: 800px) {
-    			body {
-    				background-color: red;
-				}
+		@media only screen and (max-width: 800px) {
+			body {
+				background-color: red;
 			}
+		}
 
-    		body {
-    			background-color:black;
-                margin: 0;
-            }
+		body {
+			background-color: black;
+			margin: 0;
+		}
 
-    		#navbar {
-    			display: flex;
-    			justify-content: flex-end;
-    			position: fixed;
-    			top: 0;
-    			left: 0;
-    			width: 100%;
-    			background: #DC143C;
-    			box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-    			z-index: 10;
-    			font-family: monospace;
-    		}
+		#navbar {
+			display: flex;
+			justify-content: flex-end;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: #DC143C;
+			box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+			z-index: 10;
+			font-family: monospace;
+		}
 
-    		.linksPrincipales {
-    			display: block;
-    			font-size: 2.2rem;
-    			padding: 2rem;
-    		}
+		.linksPrincipales {
+			display: block;
+			font-size: 2.2rem;
+			padding: 2rem;
+		}
 
-    		#welcome-section {
-    			display: flex;
-			    flex-direction: column;
-			    justify-content: center;
-			    align-items: center;
-			    width: 100%;
-			    height: 100vh;
-			    background-color: #000;
-			    background-image: url("binary.jpg");
-				background-repeat: no-repeat;
-				background-position:  50% 150%
-			}
+		#welcome-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			background-color: #000;
+			background-image: url("binary.jpg");
+			background-repeat: no-repeat;
+			background-position: 50% 150%
+		}
 
-    		h1 {
-    			text-align: center;
-    			font-family: monospace;
-    			font-size: 40px;
-    			color: white;
-    		}
+		h1 {
+			text-align: center;
+			font-family: monospace;
+			font-size: 40px;
+			color: white;
+		}
 
-    		h2 {
-    			text-align: center;
-    			font-family: cursive;
-    			font-size: 25px;
-    			color: #DC143C;
-    		}
+		h2 {
+			text-align: center;
+			font-family: cursive;
+			font-size: 25px;
+			color: #DC143C;
+		}
 
-    		h3 {
-    			text-align: center;
-    			font-size: 30px;
-    			font-family: monospace;
-    			color: white;
-    		}
+		h3 {
+			text-align: center;
+			font-size: 30px;
+			font-family: monospace;
+			color: white;
+		}
 
-    		img {
-    			width: 200px;
-				border: 3px solid red;
-    		}    	
+		img {
+			width: 200px;
+			border: 3px solid red;
+		}
 
-    		a {
-    			text-decoration: none;
-    			color: black;
-    		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
 
-    		#divLinkFinal {
-    			text-align: center;
-    		}
+		#divLinkFinal {
+			text-align: center;
+		}
 
-    		#proyectosGrid {
-    			display: grid;
-    			grid-template-columns: repeat(3, 250px);
-    			justify-content: center;
-    			grid-gap: 1em;
-    		}
+		#proyectosGrid {
+			display: grid;
+			grid-template-columns: repeat(3, 250px);
+			justify-content: center;
+			grid-gap: 1em;
+		}
 
-    		#volverArriba {
-    			text-align: center;
-    		}
+		#proyectosGrid img {
+			width: 200px;
+			height: 300px;
+			border: 3px solid red;
+		}
 
-    		#up {
-    			font-size: 30px;
-    			font-family: monospace;
-    			 color: #DC143C;
-    		}
+		#volverArriba {
+			text-align: center;
+		}
 
-    		p {
-    			text-align: center;
-    			font-size: 30px;
-    			color: white;
-    		}
+		#up {
+			font-size: 30px;
+			font-family: monospace;
+			color: #DC143C;
+		}
 
-    		#divProyectos {
-    			background-color: #000;			    
-			}
+		p {
+			text-align: center;
+			font-size: 30px;
+			color: white;
+		}
 
-			#aboutMe {
-				display: flex;
-			    flex-direction: column;
-			    justify-content: center;
-			    align-items: center;
-			    width: 100%;
-			    height: 100vh;
-			    background-color: #000;
-			}
+		#divProyectos {
+			background-color: #000;
+		}
 
-    		
-    	</style>
-
-    	<nav id=navbar>
-			<a href="#aboutMe" class="linksPrincipales">About me</a>
-    		<a href="#projects" class="linksPrincipales">Projects</a>
-			<a href="#divProyectos" class="linksPrincipales">GitHub</a>
-    		<a href="#contacto" class="linksPrincipales">Contact</a>
-    	</nav>
-
-    	<section id="welcome-section">
-    		<h1>Manu González</h1>
-    		<h2>Software Developer</h2>
-    	</section>
-
-		<section id="aboutMe">
-			<p>
-				I'm passionate about coding and enjoy learning different 
-				technologies.
-				<br>
-				Everyday I invest my time in enriching my knowledge.
-				<br>
-				 I'm doing my best in order to become a better Full Stack Developer.
-			</p>
-		</section>
-    	
-    	<section id="projects" style="padding-top: 5rem;">
-    		<h3 class="project-tile">Some of my projects</h3>    		
-    		<div id="proyectosGrid">
-				<a target="_blank" title="theMovieDatabase" href="https://themoviedatabase01.herokuapp.com/"><img src="movie.jpg" alt="Imagen movie time" /></a>
-				<a target="_blank" title="Bane" href="https://manuelgonzalez007.github.io/bane/"><img src="bane.jpg" alt="Foto de Bane" /></a>
-				<a target="_blank" title="crudMovies" href="https://crudmovies01.herokuapp.com/"><img src="departed.jpg" alt="Poster pelicula The departed" /></a>	    		
-	    		<a target="_blank" title="theOffice" href="https://manuelgonzalez007.github.io/theOfficeTrivia/"><img src="theOffice.jpg" alt="Cartel de The Office" /></a>
-				<a target="_blank" title="crudAPI" href="https://crudapi01.herokuapp.com/"><img src="got.jpg" alt="Foto Game of thrones" /></a>	    		
-				<a target="_blank" title="mkGallery" href="https://manuelgonzalez007.github.io/mkGallery/"><img src="mk.jpg" alt="Logo de Mortal Kombat" /></a>
-				<a target="_blank" title="Elm Street" href="https://manuelgonzalez007.github.io/aNightmareOnElmStreet/"><img src="elmStreet.jpg" alt="Cartel de la película A nightmare on Elm Street" /></a>
-	    		<a target="_blank" title="Comic" href="https://manuelgonzalez007.github.io/comicBookGuy/"><img src="comicBookGuy.png" alt="Imagen del sujeto de las historietas comicas" /></a>
-				<a target="_blank" title="starWars" href="https://manuelgonzalez007.github.io/starWarsGallery/"><img src="starWars.jpg" alt="Imagen de Darth Vader" /></a>
-				<a target="_blank" title="Count Up" href="https://manuelgonzalez007.github.io/countUp/"><img src="countUp.jpg" alt="Imagen de un cronometro" /></a>
-				<a target="_blank" title="Lemongrab" href="https://manuelgonzalez007.github.io/deathOfLemongrab/"><img src="lemongrab.png" alt="Imagen de Lemongrab" /></a>
-    		</div>    		
-    	</section>
-
-    	<div id="divProyectos">
-			<h3 style="padding-top: 8rem">Find all my work here</h3>
-	    	<div id="divLinkFinal">
-	    		<a target="_blank" title="gitHub" href="https://github.com/ManuelGonzalez007"><img style="width: 100px; border: 0;" src="gitHub.png" style="width: 150px"></a>
-	    	</div>
+		#aboutMe {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+			background-color: #000;
+		}
+	</style>
+	<nav id=navbar>
+		<a href="#aboutMe" class="linksPrincipales">About me</a>
+		<a href="#projects" class="linksPrincipales">Projects</a>
+		<a href="#divProyectos" class="linksPrincipales">GitHub</a>
+		<a href="#contacto" class="linksPrincipales">Contact</a>
+	</nav>
+	<section id="welcome-section">
+		<h1>Manu González</h1>
+		<h2>Software Developer</h2>
+	</section>
+	<section id="aboutMe">
+		<p>
+			I'm passionate about coding and enjoy learning different
+			technologies.
 			<br>
-			<br>		
-			<h3 id="contacto">Email</h3>
-			<p>manuelgonzalez14812@gmail.com</p>
-			<br>			
-			<h3>LinkedIn</h3>			
-			<div style="text-align: center">
-				<a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/manuel-gonzalez-ab985810b"><img style="width: 50px; border: 0" src="linkedin.jpg"></a>
-			</div>	    	
-	    	<br>
-	    	<br>
+			Everyday I invest my time in enriching my knowledge.
 			<br>
-			<br>						
-	    	<div id="volverArriba">
-				<a id="up" href="#top"><img style=" width: 30px; border: 0" src="up.jpg" style="width: 25px"></a>
-			</div>
-			<p style="color:red; font-size: 15px;">BACK TO TOP</p>
-			<br>
-			<br>
+			I'm doing my best in order to become a better Full Stack Developer.
+		</p>
+	</section>
+	<section id="projects" style="padding-top: 5rem;">
+		<h3 class="project-tile">Some of my projects</h3>
+		<div id="proyectosGrid">
+			<a target="_blank" title="theMovieDatabase" href="https://themoviedatabase01.herokuapp.com/"><img
+					src="movie.jpg" alt="Imagen movie time" /></a>
+			<a target="_blank" title="superheroTeam" href="https://superheroteam.herokuapp.com/"><img src="superman.jpg"
+					alt="Imagen de Superman" /></a>
+			<a target="_blank" title="crudMovies" href="https://crudmovies01.herokuapp.com/"><img src="departed.jpg"
+					alt="Poster pelicula The departed" /></a>
+			<a target="_blank" title="crudAPI" href="https://crudapi01.herokuapp.com/"><img src="got.jpg"
+					alt="Foto Game of thrones" /></a>
+			<a target="_blank" title="angularBlog" href="https://angularblog01.herokuapp.com/"><img src="blog.jpg"
+					alt="Foto de un blog " /></a>
+			<a target="_blank" title="Bane" href="https://manuelgonzalez007.github.io/bane/"><img src="bane.jpg"
+					alt="Foto de Bane" /></a>
+			<a target="_blank" title="theOffice" href="https://manuelgonzalez007.github.io/theOfficeTrivia/"><img
+					src="theOffice.jpg" alt="Cartel de The Office" /></a>
+			<a target="_blank" title="mkGallery" href="https://manuelgonzalez007.github.io/mkGallery/"><img src="mk.jpg"
+					alt="Logo de Mortal Kombat" /></a>
+			<a target="_blank" title="Elm Street" href="https://manuelgonzalez007.github.io/aNightmareOnElmStreet/"><img
+					src="elmStreet.jpg" alt="Cartel de la película A nightmare on Elm Street" /></a>
+			<a target="_blank" title="Comic" href="https://manuelgonzalez007.github.io/comicBookGuy/"><img
+					src="comicBookGuy.png" alt="Imagen del sujeto de las historietas comicas" /></a>
+			<a target="_blank" title="starWars" href="https://manuelgonzalez007.github.io/starWarsGallery/"><img
+					src="starWars.jpg" alt="Imagen de Darth Vader" /></a>
+			<a target="_blank" title="Count Up" href="https://manuelgonzalez007.github.io/countUp/"><img
+					src="countUp.jpg" alt="Imagen de un cronometro" /></a>
+			<a target="_blank" title="Lemongrab" href="https://manuelgonzalez007.github.io/deathOfLemongrab/"><img
+					src="lemongrab.png" alt="Imagen de Lemongrab" /></a>
 		</div>
-    </body>
+	</section>
+	<div id="divProyectos">
+		<h3 style="padding-top: 8rem">Find all my work here</h3>
+		<div id="divLinkFinal">
+			<a target="_blank" title="gitHub" href="https://github.com/ManuelGonzalez007"><img
+					style="width: 100px; border: 0;" src="gitHub.png" style="width: 150px"></a>
+		</div>
+		<br>
+		<br>
+		<h3 id="contacto">Email</h3>
+		<p>manuelgonzalez14812@gmail.com</p>
+		<br>
+		<h3>LinkedIn</h3>
+		<div style="text-align: center">
+			<a target="_blank" title="Linkedin" href="https://www.linkedin.com/in/manuel-gonzalez-ab985810b"><img
+					style="width: 50px; border: 0" src="linkedin.jpg"></a>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="volverArriba">
+			<a id="up" href="#top"><img style=" width: 30px; border: 0" src="up.jpg" style="width: 25px"></a>
+		</div>
+		<p style="color:red; font-size: 15px;">BACK TO TOP</p>
+		<br>
+		<br>
+	</div>
+</body>
+
 </html>
